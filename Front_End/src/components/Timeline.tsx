@@ -1,11 +1,13 @@
 import Share from './Share.tsx';
+import Post from './Post.tsx';
 
 const Timeline = () => {
   return (
     <div className={'w-8/12 border border-yellow-800'}>
       <div>
         <Share />
-        {/*<Post />*/}
+        <Post />
+        <Post />
       </div>
     </div>
   );
