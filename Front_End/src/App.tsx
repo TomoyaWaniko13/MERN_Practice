@@ -1,4 +1,4 @@
-import Home from './pages/home/Home.tsx';
+import Home from './pages/Home.tsx';
 
 export default function App() {
   console.log('This');
