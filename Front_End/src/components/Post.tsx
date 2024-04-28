@@ -1,14 +1,19 @@
 import { FaHeart } from 'react-icons/fa';
 import { HiDotsVertical } from 'react-icons/hi';
 import { Users } from '../experimentalData.ts';
+import { useState } from 'react';
 
 const Post = ({ post }) => {
-  // console.log(Users);
-  // console.log(Users.filter((user) => user.id === 1));
-  // console.log(post);
-
+  // get a 'nth element(user)' from 'Users' array.
   const user = Users.find((user) => post.id === user.id);
 
+  const [numberOfLike, setNumberOfLike] = useState(post.like);
+  const [isLiked, setIsLiked] = useState(false);
+
+  const handleLike = () => {
+    setNumberOfLike(!isLiked ? numberOfLike + 1 : numberOfLike - 1);
+    setIsLiked((prevState) => !prevState);
+  };
   return (
     <article className={'w-full p-4 shadow-md'}>
       <header className={'flex justify-between items-center'}>
@@ -28,8 +33,10 @@ const Post = ({ post }) => {
       </section>
       <footer className={'flex justify-between items-center'}>
         <div className={'flex mt-3'}>
-          <FaHeart size={23} color={'red'} className={'mx-2'} />
-          <span>{post.like} users liked this post.</span>
+          <div onClick={() => handleLike()}>
+            <FaHeart size={23} color={'red'} className={'mx-2'} />
+          </div>
+          <span>{numberOfLike} users liked this post.</span>
         </div>
         <div>
           <span>{post.comment} comments</span>
