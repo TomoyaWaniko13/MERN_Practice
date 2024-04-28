@@ -7,68 +7,68 @@ import { MdOutlinePersonOutline } from 'react-icons/md';
 const SideBar = () => {
   return (
     <>
-      <aside className={'border border-green-600 w-1/6 text-blac'}>
+      <aside className={'border border-green-600 w-1/6 text-black text-xl p-2'}>
         <div className={'p-1'}>
           <ul className={'flex flex-col'}>
             <li
               className={
-                'flex items-center p-1 shadow cursor-pointer hover:transform hover:translate-y-0.5 hover:transition duration-300'
+                'flex items-center p-3 shadow cursor-pointer hover:transform hover:translate-y-0.5 hover:bg-black hover:text-white duration-500 '
               }
             >
-              <CiHome className={'mr-1'} />
+              <CiHome className={'mx-3'} />
               <span>Home</span>
             </li>
             <li
               className={
-                'flex items-center p-1 shadow cursor-pointer hover:transform hover:translate-y-0.5 hover:transition duration-300'
+                'flex items-center p-3 shadow cursor-pointer hover:transform hover:translate-y-0.5 hover:bg-black hover:text-white duration-500 '
               }
             >
-              <FaSearch className={'mr-1'} />
+              <FaSearch className={'mx-3'} />
               <span>Search</span>
             </li>
             <li
               className={
-                'flex items-center p-1 shadow cursor-pointer hover:transform hover:translate-y-0.5 hover:transition duration-300'
+                'flex items-center p-3 shadow cursor-pointer hover:transform hover:translate-y-0.5 hover:bg-black hover:text-white duration-500 '
               }
             >
-              <IoIosNotifications className={'mr-1'} />
+              <IoIosNotifications className={'mx-3'} />
               <span>Notification</span>
             </li>
             <li
               className={
-                'flex items-center p-1 shadow cursor-pointer hover:transform hover:translate-y-0.5 hover:transition duration-300'
+                'flex items-center p-3 shadow cursor-pointer hover:transform hover:translate-y-0.5 hover:bg-black hover:text-white duration-500 '
               }
             >
-              <FaRegMessage className={'mr-1'} />
+              <FaRegMessage className={'mx-3'} />
               <span>Message</span>
             </li>
             <li
               className={
-                'flex items-center p-1 shadow cursor-pointer hover:transform hover:translate-y-0.5 hover:transition duration-300'
+                'flex items-center p-3 shadow cursor-pointer hover:transform hover:translate-y-0.5 hover:bg-black hover:text-white duration-500 '
               }
             >
-              <CiBookmark className={'mr-1'} />
+              <CiBookmark className={'mx-3'} />
               <span>BookMark</span>
             </li>
             <li
               className={
-                'flex items-center p-1 shadow cursor-pointer hover:transform hover:translate-y-0.5 hover:transition duration-300'
+                'flex items-center p-3 shadow cursor-pointer hover:transform hover:translate-y-0.5 hover:bg-black hover:text-white duration-500 '
               }
             >
-              <MdOutlinePersonOutline className={'mr-1'} />
+              <MdOutlinePersonOutline className={'mx-3'} />
               <span>Profile</span>
             </li>
             <li
               className={
-                'flex items-center p-1 shadow cursor-pointer hover:transform hover:translate-y-0.5 hover:transition duration-300'
+                'flex items-center p-3 shadow cursor-pointer hover:transform hover:translate-y-0.5 hover:bg-black hover:text-white duration-500 '
               }
             >
-              <CiSettings className={'mr-1'} />
+              <CiSettings className={'mx-3'} />
               <span>Setting</span>
             </li>
           </ul>
           <section>
-            <ul className={'flex flex-col border-2 border-cyan-500 '}>
+            <ul className={'flex flex-col shadow-md'}>
               <li
                 className={
                   'flex items-center my-2 hover:transform hover:translate-y-0.5 hover:transition duration-300 cursor-pointer'

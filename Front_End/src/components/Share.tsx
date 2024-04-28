@@ -10,7 +10,7 @@ const Share = () => {
           <img src='/assets/person/1.jpeg' alt='' className={'mx-1'} />
           <div></div>
           <textarea
-            placeholder={'Write your thoughts here...'}
+            placeholder={'Post from here...'}
             className={
               'w-full p-2 text-gray-900 bg-gray-50 placeholder-gray-300 rounded-lg border border-gray-400 focus:ring-blue-500 focus:border-blue-500'
             }
@@ -20,19 +20,27 @@ const Share = () => {
 
         <div className={'w-full flex items-center justify-between'}>
           <nav className={'flex'}>
-            <figure className={'flex items-center mx-2'}>
+            <figure
+              className={'flex items-center mx-2 cursor-pointer hover:transform hover:translate-y-0.5 duration-300'}
+            >
               <CiImageOn size={25} color={'blue'} />
               <figcaption>photo</figcaption>
             </figure>
-            <figure className={'flex items-center mx-2'}>
+            <figure
+              className={'flex items-center mx-2 cursor-pointer hover:transform hover:translate-y-0.5 duration-300'}
+            >
               <PiGifLight size={25} color={'blue'} />
               <figcaption>GIF</figcaption>
             </figure>
-            <figure className={'flex items-center mx-2'}>
+            <figure
+              className={'flex items-center mx-2 cursor-pointer hover:transform hover:translate-y-0.5 duration-300'}
+            >
               <CiHeart size={25} color={'blue'} />
               <figcaption>feeling</figcaption>
             </figure>
-            <figure className={'flex items-center mx-2'}>
+            <figure
+              className={'flex items-center mx-2 cursor-pointer hover:transform hover:translate-y-0.5 duration-300'}
+            >
               <MdOutlineAnalytics size={25} color={'blue'} />
               <figcaption>Vote</figcaption>
             </figure>

@@ -3,7 +3,7 @@ import Post from './Post.tsx';
 
 const Timeline = () => {
   return (
-    <div className={'w-8/12 border border-yellow-800'}>
+    <div className={'w-7/12 border border-yellow-800'}>
       <div>
         <Share />
         <Post />

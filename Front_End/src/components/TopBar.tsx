@@ -8,7 +8,7 @@ const TopBar = () => {
       <section className={'text-center'}>
         <h1 className={'hidden sm:block font-extrabold text-5xl text-emerald-100 mx-10'}>MERN</h1>
       </section>
-      <nav className={'flex justify-end items-center w-full border-2 border-green-600'}>
+      <nav className={'flex justify-end items-center w-full'}>
         <div className='relative w-full flex justify-end'>
           <div className='absolute inset-y-0 start-0 flex items-center ps-1 pointer-events-none '>
             <FaSearch size={20} color={'black'} />
