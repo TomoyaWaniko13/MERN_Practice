@@ -4,22 +4,13 @@ import User from '../schema_models/User.js';
 
 const userRouter = express.Router();
 
-// edit user's data
-userRouter.put('/:id', async (req, res) => {
-  const loggedInUserId = req.body.userId;
-  const editTargetUserId = req.params.id;
+userRouter.put('/:userId', async (req, res) => {
+  const currentUserId = req.body.userId;
+  const editTargetUserId = req.params.userId;
 
-  if (loggedInUserId === editTargetUserId || req.body.isAdmin) {
-    try {
-      //   TODO continue from here.
-    } catch (e) {
-      // 500 Internal Server Error
-      res.status(500).json(e);
-    }
-  } else {
-    // 403 Forbidden
-    res.status(403).json('you can only update your own account');
-  }
+  try {
+    const editedUser = await User.findByIdAndUpdate(editTargetUserId, { $set: req.body });
+  } catch (e) {}
 });
 
 export default userRouter;
