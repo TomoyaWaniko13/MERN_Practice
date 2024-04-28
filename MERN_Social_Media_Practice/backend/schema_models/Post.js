@@ -13,7 +13,7 @@ const PostSchema = new mongoose.Schema(
     img: {
       type: String,
     },
-    postLikersIdsArray: {
+    postLikersIdArray: {
       type: Array,
       default: [],
     },
