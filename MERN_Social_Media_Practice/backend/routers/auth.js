@@ -6,23 +6,19 @@ const authRouter = express.Router();
 
 // register a new user
 authRouter.post('/register', async (req, res) => {
-  console.log('working....');
   try {
-    const newUser = await new User({
-      userName: req.body.userName,
-      email: req.body.email,
-      password: req.body.password,
-    });
-    res.status(200).json(newUser);
+    // https://mongoosejs.com/docs/models.html
+    const newUser = await User.create(req.body);
     console.log(newUser);
+    return res.status(200).json(newUser);
   } catch (e) {
     res.status(500).json(e);
   }
 });
 
 // login ->
-// 1.retrieve a specified user by email
-// 2. check if the password of the  retrieved user is the same as teh
+// 1.retrieve a specified user by an email
+// 2. check if the password of the retrieved user is the same as the specified password
 authRouter.post('/login', async (req, res) => {
   try {
     // db.collection.findOne()

@@ -1,5 +1,6 @@
 import express from 'express';
 import Post from '../schema_models/Post.js';
+import User from '../schema_models/User.js';
 
 const postsRouter = express.Router();
 
@@ -8,6 +9,8 @@ postsRouter.post('/', async (req, res) => {
   try {
     // https://mongoosejs.com/docs/models.html
     const newPost = await Post.create(req.body);
+    console.log(newPost);
+    return res.status(200).json(newPost);
   } catch (e) {
     console.log(e);
     return res.status(500).json(e);
@@ -78,15 +81,49 @@ postsRouter.put('/:id/like', async (req, res) => {
 postsRouter.get('/:id', async (req, res) => {
   const targetPostObjectId = req.params.id;
   try {
-    const retriedTargetPost = await Post.findById(targetPostObjectId);
-    console.log(retriedTargetPost);
-    res.status(200).json(retriedTargetPost);
+    const retrievedTargetPost = await Post.findById(targetPostObjectId);
+    console.log(retrievedTargetPost);
+    res.status(200).json(retrievedTargetPost);
   } catch (e) {
     console.log(e);
     res.status(500).json(e);
   }
 });
 
-// TODO restart from this line
+// get all posts of one specific user
+postsRouter.get('/profile/:userName', async (req, res) => {
+  const currentUserName = req.params.userName;
+  try {
+    const currentUser = await User.findOne({ userName: currentUserName });
+    const currentUserObjectId = currentUser._id;
+    const currentUserPosts = await Post.find({ userId: currentUserObjectId });
+    console.log(currentUserPosts);
+  } catch (e) {
+    console.log(e);
+    res.status(500).json(e);
+  }
+});
+
+postsRouter.get('/timeline/:userId', async (req, res) => {
+  const currentUserObjectId = req.params.userId;
+
+  try {
+    const currentUser = await User.findById(currentUserObjectId);
+    // https://www.mongodb.com/docs/manual/reference/method/db.collection.find/#mongodb-method-db.collection.find
+    // Selects documents in a collection or view and returns a cursor to the selected documents.
+    // const userPosts = await Post.find({ userId: currentUserObjectId });
+    const currentUserPosts = await Post.find({ userId: currentUserObjectId });
+
+    const followingsPosts = await Promise.all(
+      currentUser.followingsIdArray.map((followingId) => Post.find({ userId: followingId })),
+    );
+    const timelinePosts = currentUserPosts.concat(...followingsPosts);
+    console.log(timelinePosts);
+    return res.status(200).json(timelinePosts);
+  } catch (e) {
+    console.log(e);
+    res.status(500).json(e);
+  }
+});
 
 export default postsRouter;

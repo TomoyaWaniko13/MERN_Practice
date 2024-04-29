@@ -26,7 +26,7 @@ const UserSchema = new mongoose.Schema(
     },
     coverPicture: {
       type: String,
-      default: [],
+      default: '',
     },
     followersIdArray: {
       type: [],
