@@ -2,6 +2,7 @@ import mongoose from 'mongoose';
 
 const PostSchema = new mongoose.Schema(
   {
+    // this 'userId' indicates who created this post.
     userId: {
       type: String,
       required: true,
