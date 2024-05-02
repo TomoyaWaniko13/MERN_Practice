@@ -6,7 +6,7 @@ import { IoSettingsOutline } from 'react-icons/io5';
 const LeftBar = () => {
   return (
     <>
-      <div className={'w-1/5 p-2  text-xl'}>
+      <div className={'w-1/5 p-2 text-xl'}>
         <ul className={'shadow p-2'}>
           <li className={'flex justify-start items-center hover:bg-black hover:text-white duration-300 cursor-pointer'}>
             <CiHome className={'mx-2'} />

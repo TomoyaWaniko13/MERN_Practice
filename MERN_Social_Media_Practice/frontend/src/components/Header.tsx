@@ -6,8 +6,8 @@ import { useState } from 'react';
 const Header = () => {
   const [inputValue, setInputValue] = useState('');
 
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value);
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
     console.log(inputValue);
   };
 
