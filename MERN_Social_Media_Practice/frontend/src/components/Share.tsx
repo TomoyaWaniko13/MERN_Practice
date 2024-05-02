@@ -5,7 +5,7 @@ import { FaPerson } from 'react-icons/fa6';
 const Share = () => {
   return (
     <>
-      <div className={'border-2 border-emerald-700 p-4 my-3'}>
+      <div className={'border-2 border-black p-4 my-3'}>
         <div className={'flex items-center justify-start mt-3'}>
           <img src='src/assets/person/1.jpeg' alt='' className={'rounded-full w-10 h-10 mt-2 mx-2'} />
           <input
