@@ -4,7 +4,7 @@ import { Posts } from '../../dummyData.ts';
 
 const Timeline = () => {
   return (
-    <div className={'flex flex-col w-3/5'}>
+    <div className={'flex flex-col'}>
       <Share />
       {Posts.map((post) => (
         <Post post={post} key={post.id}></Post>

@@ -3,7 +3,7 @@ import { IoIosNotificationsOutline } from 'react-icons/io';
 import { FaMagnifyingGlass } from 'react-icons/fa6';
 import { useState } from 'react';
 
-const Header = () => {
+const TopBar = () => {
   const [inputValue, setInputValue] = useState('');
 
   const handleInputChange = (e) => {
@@ -13,8 +13,8 @@ const Header = () => {
 
   return (
     <header className='bg-black w-full h-24 text-white flex justify-between items-center'>
-      <nav className='w-1/6 text-center'>
-        <h1 className='text-4xl font-extrabold'>MERN</h1>
+      <nav className='text-center'>
+        <h1 className='ml-4 text-4xl font-extrabold'>MERN</h1>
       </nav>
       <section className='relative w-4/6'>
         <FaMagnifyingGlass className='absolute top-1/2 left-3 transform -translate-y-1/2' color='black' />
@@ -37,4 +37,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default TopBar;
