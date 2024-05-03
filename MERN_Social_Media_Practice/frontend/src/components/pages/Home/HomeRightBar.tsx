@@ -1,4 +1,4 @@
-import { Users } from '../../dummyData.ts';
+import { Users } from '../../../../dummyData.ts';
 import OnlineFriend from './OnlineFriend.tsx';
 
 const HomeRightBar = () => {

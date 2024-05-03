@@ -1,8 +1,8 @@
 import TopBar from '../../TopBar.tsx';
 import LeftBar from '../../LeftBar.tsx';
 import Share from '../../Share.tsx';
-import ProfileRightBar from '../../ProfileRightBar.tsx';
-import ProfileNavBar from '../../ProfileNavBar.tsx';
+import ProfileRightBar from './ProfileRightBar.tsx';
+import ProfileHeader from './ProfileHeader.tsx';
 
 const Profile = () => {
   return (
@@ -17,7 +17,7 @@ const Profile = () => {
         <div className={'w-4/5'}>
           <div className={'flex flex-col'}>
             <div className={'w-full'}>
-              <ProfileNavBar />
+              <ProfileHeader />
             </div>
             <div className={'flex flex-row'}>
               <Share />

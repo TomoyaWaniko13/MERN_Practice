@@ -26,7 +26,7 @@ const Share = () => {
             </li>
             <li className={'flex'}>
               <FaPerson size={25} className={'mx-2'} />
-              <span>emotion</span>
+              <span>feeling</span>
             </li>
             <li className={'flex'}>
               <MdDataThresholding size={25} className={'mx-2'} />

@@ -1,6 +1,6 @@
-import Share from './Share.tsx';
-import Post from './Post.tsx';
-import { Posts } from '../../dummyData.ts';
+import Share from '../../Share.tsx';
+import Post from '../../Post.tsx';
+import { Posts } from '../../../../dummyData.ts';
 
 const Timeline = () => {
   return (
