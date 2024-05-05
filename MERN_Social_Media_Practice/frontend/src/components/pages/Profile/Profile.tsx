@@ -1,8 +1,9 @@
 import TopBar from '../../TopBar.tsx';
-import LeftBar from '../../LeftBar.tsx';
+
 import Share from '../../Share.tsx';
 import ProfileRightBar from './ProfileRightBar.tsx';
 import ProfileHeader from './ProfileHeader.tsx';
+import LeftBar from '../../Common/LeftBar.tsx';
 
 const Profile = () => {
   return (

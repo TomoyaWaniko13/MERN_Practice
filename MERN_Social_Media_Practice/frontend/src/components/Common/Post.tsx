@@ -1,7 +1,8 @@
 import { BsThreeDotsVertical } from 'react-icons/bs';
 import { CiHeart } from 'react-icons/ci';
-import { Users } from '../../dummyData.ts';
+
 import { useState } from 'react';
+import { Users } from '../../../dummyData.ts';
 
 const Post = ({ post }) => {
   const [numberOfLike, setNumberOfLike] = useState(0);

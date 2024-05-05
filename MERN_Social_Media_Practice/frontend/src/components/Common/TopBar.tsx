@@ -1,8 +1,7 @@
-import { BsChatLeftText, BsThreeDotsVertical } from 'react-icons/bs';
+import { BsChatLeftText } from 'react-icons/bs';
 import { IoIosNotificationsOutline } from 'react-icons/io';
 import { FaMagnifyingGlass } from 'react-icons/fa6';
 import { useState } from 'react';
-import { RxCross2 } from 'react-icons/rx';
 
 const TopBar = () => {
   const [inputValue, setInputValue] = useState('');
