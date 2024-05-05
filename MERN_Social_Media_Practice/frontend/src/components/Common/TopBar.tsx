@@ -2,20 +2,22 @@ import { BsChatLeftText } from 'react-icons/bs';
 import { IoIosNotificationsOutline } from 'react-icons/io';
 import { FaMagnifyingGlass } from 'react-icons/fa6';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const TopBar = () => {
   const [inputValue, setInputValue] = useState('');
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
-    console.log(inputValue);
   };
 
   return (
     <>
       <div className={'flex items-center w-full justify-between bg-black text-white h-24'}>
         <nav className='hidden md:block text-center w-1/6'>
-          <h1 className=' mx-4 text-4xl font-extrabold'>MERN</h1>
+          <Link to={'/'}>
+            <h1 className=' mx-4 text-4xl font-extrabold'>MERN</h1>
+          </Link>
         </nav>
 
         <section className='relative mr-10 w-4/6 mx-4'>

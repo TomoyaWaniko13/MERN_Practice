@@ -5,17 +5,18 @@ import { IoSettingsOutline } from 'react-icons/io5';
 import CloseFriend from './CloseFriend.tsx';
 import { Users } from '../../../dummyData.ts';
 import { Link } from 'react-router-dom';
+import { CgProfile } from 'react-icons/cg';
 
 const LeftBar = () => {
   return (
     <div className={'p-2 text-xl'}>
       <ul className={'shadow p-2'}>
-        <li className={'flex justify-start items-center hover:bg-black hover:text-white duration-300 cursor-pointer'}>
-          <CiHome className={'mx-2'} />
-          <Link to={'/'}>
+        <Link to={'/'}>
+          <li className={'flex justify-start items-center hover:bg-black hover:text-white duration-300 cursor-pointer'}>
+            <CiHome className={'mx-2'} />
             <span>Home</span>
-          </Link>
-        </li>
+          </li>
+        </Link>
         <li
           className={'flex justify-start items-center hover:bg-black hover:text-white duration-300 cursor-pointer mt-3'}
         >
@@ -42,6 +43,16 @@ const LeftBar = () => {
           <CiBookmark className={'mx-2'} />
           <span>Bookmark</span>
         </li>
+        <Link to={'/profile/'}>
+          <li
+            className={
+              'flex justify-start items-center hover:bg-black hover:text-white duration-300 cursor-pointer mt-3'
+            }
+          >
+            <CgProfile className={'mx-2'} />
+            <span>Profile</span>
+          </li>
+        </Link>
         <li
           className={'flex justify-start items-center hover:bg-black hover:text-white duration-300 cursor-pointer mt-3'}
         >

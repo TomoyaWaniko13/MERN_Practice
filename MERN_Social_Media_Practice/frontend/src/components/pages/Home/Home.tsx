@@ -1,9 +1,8 @@
-import TopBar from '../../TopBar.tsx';
-
 import HomeRightBar from './HomeRightBar.tsx';
 
 import Timeline from './Timeline.tsx';
 import LeftBar from '../../Common/LeftBar.tsx';
+import TopBar from '../../Common/TopBar.tsx';
 
 const Home = () => {
   return (

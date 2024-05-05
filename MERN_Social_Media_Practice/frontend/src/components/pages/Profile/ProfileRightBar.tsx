@@ -9,7 +9,7 @@ const ProfileRightBar = () => {
       <span className={'block'}>your friends</span>
       <div className={'flex flex-row flex-wrap'}>
         {Users.map((user) => (
-          <YourFriend user={user} />
+          <YourFriend key={user.id} user={user} />
         ))}
       </div>
     </div>
