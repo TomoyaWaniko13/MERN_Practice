@@ -12,8 +12,9 @@ const LeftBar = () => {
       <ul className={'shadow p-2'}>
         <li className={'flex justify-start items-center hover:bg-black hover:text-white duration-300 cursor-pointer'}>
           <CiHome className={'mx-2'} />
-          <span>Home</span>
-          <Link to={'/'} />
+          <Link to={'/'}>
+            <span>Home</span>
+          </Link>
         </li>
         <li
           className={'flex justify-start items-center hover:bg-black hover:text-white duration-300 cursor-pointer mt-3'}
