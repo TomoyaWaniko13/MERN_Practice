@@ -4,15 +4,28 @@ import { CiHeart } from 'react-icons/ci';
 import { useState } from 'react';
 import { Users } from '../../../dummyData.ts';
 
-const Post = ({ post }) => {
+interface PostProps {
+  post: {
+    id: number;
+    desc: string;
+    photo: string;
+    date: string;
+    userId: number;
+    like: number;
+    comment: number;
+  };
+}
+
+const Post = ({ post }: PostProps) => {
   const PUBLIC_FOLDER = import.meta.env.VITE_REACT_APP_PUBLIC_FOLDER;
 
   const [numberOfLike, setNumberOfLike] = useState(0);
   const [isLiked, setIsLiked] = useState(false);
 
-  const currentUser = Users.filter((user) => user.id === post.id);
+  const currentUser = Users.filter((user) => user.id === post.userId);
 
   console.log(currentUser);
+
   const handleLike = () => {
     setNumberOfLike(isLiked ? numberOfLike - 1 : numberOfLike + 1);
     setIsLiked((prevState) => !prevState);
@@ -23,11 +36,15 @@ const Post = ({ post }) => {
       <header className={'flex justify-between items-center '}>
         <div className={'flex flex-row items-center'}>
           <img
-            src={'http://localhost:5173/assets/person/1.jpeg'}
+            src={
+              currentUser.length > 0 && currentUser[0].profilePicture
+                ? PUBLIC_FOLDER + currentUser[0].profilePicture
+                : PUBLIC_FOLDER + 'person/noAvatar.png'
+            }
             alt=''
-            className={'rounded-full w-10 h-10 mt-2 mr-3'}
+            className='postProfileImg'
           />
-          <span className={'font-semibold mr-3'}>{currentUser[0].userName}</span>
+          <span className={'font-semibold mr-3'}>{currentUser.length > 0 ? currentUser[0].userName : 'Unknown'}</span>
           <time className={'text-gray-800'}>{post.date}</time>
         </div>
         <BsThreeDotsVertical />

@@ -1,6 +1,5 @@
 const OnlineFriend = ({ user }) => {
   const PUBLIC_FOLDER = import.meta.env.VITE_REACT_APP_PUBLIC_FOLDER;
-  console.log(PUBLIC_FOLDER + user.profilePicture);
   return (
     <li className={'flex items-center mt-3'}>
       <span className={'bg-blue-400 h-3 w-3 rounded-full relative -top-1 left-2'} />

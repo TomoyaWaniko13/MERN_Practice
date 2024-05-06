@@ -21,15 +21,15 @@ const HomeRightBar = () => {
       <ul className={'mt-3'}>
         <h2 className={'text-xl font-bold'}>advertisement</h2>
         <li>
-          <img src={`${PUBLIC_FOLDER}/promotion/promotion1.jpeg`} alt='' className={' mt-2 mr-3'} />
+          <img src={`${PUBLIC_FOLDER}/promotion/promotion1.jpeg`} alt='' className={'mt-2 mr-3'} />
           <span>ad 1</span>
         </li>
         <li>
-          <img src={`${PUBLIC_FOLDER}/promotion/promotion2.jpeg`} alt='' className={' mt-2 mr-3'} />
+          <img src={`${PUBLIC_FOLDER}/promotion/promotion2.jpeg`} alt='' className={'mt-2 mr-3'} />
           <span>ad 1</span>
         </li>
         <li>
-          <img src={`${PUBLIC_FOLDER}/promotion/promotion3.jpeg`} alt='' className={' mt-2 mr-3'} />
+          <img src={`${PUBLIC_FOLDER}/promotion/promotion3.jpeg`} alt='' className={'mt-2 mr-3'} />
           <span>ad 1</span>
         </li>
       </ul>
