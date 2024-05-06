@@ -1,8 +1,13 @@
+import {Link} from "react-router-dom";
+
 const Login = () => {
     return (
-        <>
-            <h1>Login</h1>
-        </>
+            <div>
+                <h1>Login page</h1>
+                <Link to={'/register'}>
+                    register page
+                </Link>
+            </div>
     );
 };
 
