@@ -30,7 +30,7 @@ export const Posts = [
   {
     id: 1,
     desc: 'コツコツの積み重ねが大事。',
-    photo: 'assets/post/1.jpeg',
+    photo: '/post/1.jpeg',
     date: '5 minutes ago',
     userId: 1,
     like: 20,
@@ -39,7 +39,7 @@ export const Posts = [
   {
     id: 2,
     desc: 'MERNスタックが楽しすぎる',
-    photo: 'assets/post/2.jpeg',
+    photo: '/post/2.jpeg',
     date: '2 minutes ago',
     userId: 2,
     like: 140,
@@ -48,7 +48,7 @@ export const Posts = [
   {
     id: 3,
     desc: 'ShinCodeさんの解説が分かりやすい。',
-    photo: 'assets/post/3.jpeg',
+    photo: '/post/3.jpeg',
     date: '10 minutes ago',
     userId: 3,
     like: 230,
@@ -57,7 +57,7 @@ export const Posts = [
   {
     id: 4,
     desc: 'neko neko',
-    photo: 'assets/post/4.jpeg',
+    photo: '/post/4.jpeg',
     date: '1 minute ago',
     userId: 4,
     like: 1,
@@ -66,7 +66,7 @@ export const Posts = [
   {
     id: 5,
     desc: '定期的に散歩した方が生産性が上がる。',
-    photo: 'assets/post/5.jpeg',
+    photo: '/post/5.jpeg',
     date: '1 minute ago',
     userId: 5,
     like: 100,
