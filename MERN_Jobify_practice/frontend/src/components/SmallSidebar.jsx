@@ -1,4 +1,4 @@
-const SmallSideBar = () => {
+const SmallSidebar = () => {
   return (
     <>
       <div>SmallSideBar</div>
@@ -6,4 +6,4 @@ const SmallSideBar = () => {
   );
 };
 
-export default SmallSideBar;
+export default SmallSidebar;
