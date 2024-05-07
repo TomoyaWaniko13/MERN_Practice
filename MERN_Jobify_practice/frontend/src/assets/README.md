@@ -1054,7 +1054,7 @@ export default Navbar;
 
 #### Navbar CSS (optional)
 
-assets/wrappers/Navbar.js
+assets/wrappers/Navbar.jsx
 
 ```js
 import styled from 'styled-components';
